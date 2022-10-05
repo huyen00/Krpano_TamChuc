@@ -291,7 +291,6 @@
           txtadd(spot_coordinates,
           get(spot_coordinates),'
           <spot ath="', get(m_ath) , '" atv="', get(m_atv) , '" />');
-          showlog();
           trace(spot_coordinates); ]]>
     </action>
 

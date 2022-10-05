@@ -1,11 +1,11 @@
 <krpano>
-
+<!-- 
 	<layer name="option_layer" type="container" keep="true" url="%SWFPATH%/plugins/textfield.swf" visible="true" align="bottomright" width="100px" height="auto" background="true" bgcolor="0x07414c" bgalpha="0.6" x="15" y="15" onloaded="check_number_scene();resize();">
         <layer name="option_night" keep="true" url="%SWFPATH%/plugins/textfield.swf" visible="true" bgcolor="0xDF7F2C" bgalpha="0.7" align="bottomright" width="100%" y="60" css="data:css_text" html="Đêm" onclick="loadnewscene_3d();active_option(option_night); remove_active(option_day)" />
 		<layer name="option_day"  keep="true" url="%SWFPATH%/plugins/textfield.swf" visible="true" bgcolor="0x1F3C22" bgalpha="0.7" align="bottomright" width="100%" y="90" css="data:css_text" html="Ngày" onclick="loadnewscene_ht();  active_option(option_day); remove_active(option_night)"/>
 		
 
-	</layer>
+	</layer> -->
 
 	<data name="css_text">
 		color: #FFFFFF;text-align: center; padding: 5px 10px; font-size:14px;

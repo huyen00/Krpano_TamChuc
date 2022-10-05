@@ -321,7 +321,9 @@
 	</action>
 
 	<action name="skin_hotspotstyle_click" scope="local">
-		if(caller.linkedscene,
+	showlog();
+	trace(caller.linkedscene);
+		<!-- if(caller.linkedscene,
 			copy(hs_linkedscene, caller.linkedscene);
 			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 			set(caller.enabled, false);
@@ -331,9 +333,50 @@
 				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
 				skin_updatescroll();
 			);
-		);
+		); -->
 	</action>
 
+		<action name="skin_hotspotstyle_click2" scope="local">
+		        set(hotspot_data,%1);
+				showlog();
+				trace(%1);
+				txtsplit(hotspot_data, callout_line_vertical_, arr);
+				for(set(i,0), i LT arr.count, inc(i),
+					set(hotspot_link,get(arr[get(i)].value));
+				);
+				trace(hotspot[get(hotspot_link)].linkedscene);
+
+
+				if(hotspot[get(hotspot_link)].linkedscene,
+					copy(hs_linkedscene, hotspot[get(hotspot_link)].linkedscene);
+					if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
+					set(caller.enabled, false);
+					skin_hidetooltips();
+						skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+					);
+				);
+	</action>
+	<action name="skin_hotspotstyle_click_callout_pull" scope="local">
+		        set(hotspot_data,%1);
+				showlog();
+				trace(%1);
+				txtsplit(hotspot_data, callout_pulse_, arr);
+				for(set(i,0), i LT arr.count, inc(i),
+					set(hotspot_link,get(arr[get(i)].value));
+				);
+				trace(hotspot[get(hotspot_link)].linkedscene);
+
+
+				if(hotspot[get(hotspot_link)].linkedscene,
+					copy(hs_linkedscene, hotspot[get(hotspot_link)].linkedscene);
+					if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
+					set(caller.enabled, false);
+					skin_hidetooltips();
+				
+						skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+						
+				);
+	</action>
 
 	<!-- skin_tooltip - style for the thumb, hotspot and mapspot tooltips -->
 	<style name="skin_tooltips"
