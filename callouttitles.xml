@@ -16,6 +16,7 @@ set(caller.zorder,get(cozorder));
 stoptween(layer[%1].height);
 stoptween(layer[%2].width);
 stoptween(layer[%2].height);
+
 	
 tween(layer[%1].height,%5,0.3,easeOutQuad,
 	tween(layer[%2].height,calc(layer[%3].height + layer[%4].height),0.2,easeOutQuad,
@@ -34,17 +35,17 @@ tween(layer[%1].height,%5,0.3,easeOutQuad,
 );
 </action>
 
-	
 <action name="animate_callin" scope="local">
 sub(cozorder,1);
 set(caller.zorder,1);
 stoptween(layer[%2].width);
 stoptween(layer[%2].height);
 stoptween(layer[%1].height);
-	
 tween(layer[%2].width,0,0.2,,
 	tween(layer[%2].height,0,0.1,easeOutQuad,
-	tween(layer[%1].height,0,0.2,easeOutQuad)
+	tween(layer[%1].height,0,0.2,easeOutQuad),
+
+	
 	));	
 </action>
 	 
@@ -87,7 +88,6 @@ tween(layer[%2].width,0,0.2,,
 	 
 
 <action name="setup_bubble_hotspots_plugin" autorun="onstart" protect="true">
-trace(Call Out Hotspots Plugin by 360images.fr | 1.0.7);
 if(callout.author_context,
 set(contextmenu.item[plugin_author].caption, Call Out Hotspots Plugin by 360images.fr);
 set(contextmenu.item[plugin_author].onclick, openurl('https://www.360images.fr/panotour',_blank));

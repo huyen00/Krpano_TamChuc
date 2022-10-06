@@ -19,8 +19,7 @@
 
 	<!-- the action for dragging the hotspot - call it once in the ondown event -->
 	<action name="draghotspot">
-	showlog();
-	trace(get(name));
+
 	if(get(ath) != null,
 		spheretoscreen(ath, atv, hotspotcenterx, hotspotcentery, calc(mouse.stagex LT stagewidth/2 ? 'l' : 'r'));
 		sub(drag_adjustx, mouse.stagex, hotspotcenterx);
@@ -36,7 +35,6 @@
 		for(set(i,0), i LT arr.count, inc(i),
 			set(hotspot_link,get(arr[get(i)].value));
 		);
-		trace(hotspot[get(hotspot_link)].ath);
 
 		spheretoscreen(hotspot[get(hotspot_link)].ath, hotspot[get(hotspot_link)].atv, hotspotcenterx, hotspotcentery, calc(mouse.stagex LT stagewidth/2 ? 'l' : 'r'));
 		sub(drag_adjustx, mouse.stagex, hotspotcenterx);
@@ -62,7 +60,6 @@
 		showlog();
 		trace(plugin[hotspot_pos_info].html)
 	]]></action>
-
 	<action name="print_hotspot_pos_callout"><![CDATA[
 		copy(print_ath, hotspot[get(hotspot_link)].ath);
 		copy(print_atv, hotspot[get(hotspot_link)].atv);
@@ -72,7 +69,6 @@
 		showlog();
 		trace(plugin[hotspot_pos_info].html)
 	]]></action>
-
 
 	<!-- example hotspots -->
 	<hotspot name="spot1" url="hotspot.png"                  scale="0.5" ath="-25" atv="+5"  ondown="draghotspot();" />

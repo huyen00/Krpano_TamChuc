@@ -56,7 +56,7 @@
 
 
     <action name="debugcode" args="type, content, width, height, scrollbars, src_url">
-        <!-- showlog(); -->
+        showlog();
         trace(%6);
     </action>
 
@@ -553,6 +553,7 @@
           txtadd(spot_coordinates,
           get(spot_coordinates),'
           <spot ath="', get(m_ath) , '" atv="', get(m_atv) , '" />');
+          showlog();
           trace(spot_coordinates); ]]>
     </action>
 

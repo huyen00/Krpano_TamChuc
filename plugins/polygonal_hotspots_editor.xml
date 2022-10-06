@@ -131,8 +131,8 @@
 <data name="html_quote">Copy this code in your scene or xml. Make sure there is a hotspot style definition. Simple and Free  Polygonal Hotspot editor by Virtual Tuur</data>
 	
 <action name="Print">
-	trace(_toprint);
-	showlog();
+	<!-- trace(_toprint);
+	showlog(); -->
 </action>
 	
 	

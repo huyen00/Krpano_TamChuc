@@ -295,6 +295,7 @@
 
     <!-- LẤY ẢNH THUMBNAIL VÀ TIÊU DỀ CỦA SCENE ĐÍCH GÁN VÀO SỰ KIỆN HOVER HOTSPOT CỦA SCENE HIỆN TẠI -->
     <action name="get_scene_data">
+	
         showHotSpot(get(scene[get(linkedscene)].thumburl), get(scene[get(linkedscene)].title))
     </action>
 	<!-- <style name="hs_circle" url="hs_circle.png" crop="0|0|64|64" framewidth="64" frameheight="64" frame="0" lastframe="22" tooltip="" linkedscene="" linkedscene_lookat="" onclick="skin_hotspotstyle_click();" onover="tween(scale,0.85);" onout="tween(scale,0.8);" onloaded="hotspot_animate3();
@@ -321,9 +322,7 @@
 	</action>
 
 	<action name="skin_hotspotstyle_click" scope="local">
-	showlog();
-	trace(caller.linkedscene);
-		<!-- if(caller.linkedscene,
+		if(caller.linkedscene,
 			copy(hs_linkedscene, caller.linkedscene);
 			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 			set(caller.enabled, false);
@@ -333,48 +332,42 @@
 				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
 				skin_updatescroll();
 			);
-		); -->
+		);
 	</action>
-
 		<action name="skin_hotspotstyle_click2" scope="local">
 		        set(hotspot_data,%1);
-				showlog();
-				trace(%1);
 				txtsplit(hotspot_data, callout_line_vertical_, arr);
 				for(set(i,0), i LT arr.count, inc(i),
 					set(hotspot_link,get(arr[get(i)].value));
 				);
-				trace(hotspot[get(hotspot_link)].linkedscene);
-
-
 				if(hotspot[get(hotspot_link)].linkedscene,
 					copy(hs_linkedscene, hotspot[get(hotspot_link)].linkedscene);
 					if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 					set(caller.enabled, false);
 					skin_hidetooltips();
+					tween(hotspot[get(hotspot_link)].depth|hotspot[get(hotspot_link)].alpha|hotspot[get(hotspot_link)].oy|hotspot[get(hotspot_link)].rx, 4000|0.0|-50|-60, 0.5, default,
 						skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+						if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
+						skin_updatescroll();
 					);
 				);
 	</action>
 	<action name="skin_hotspotstyle_click_callout_pull" scope="local">
 		        set(hotspot_data,%1);
-				showlog();
-				trace(%1);
 				txtsplit(hotspot_data, callout_pulse_, arr);
 				for(set(i,0), i LT arr.count, inc(i),
 					set(hotspot_link,get(arr[get(i)].value));
 				);
-				trace(hotspot[get(hotspot_link)].linkedscene);
-
-
 				if(hotspot[get(hotspot_link)].linkedscene,
 					copy(hs_linkedscene, hotspot[get(hotspot_link)].linkedscene);
 					if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 					set(caller.enabled, false);
 					skin_hidetooltips();
-				
+					tween(hotspot[get(hotspot_link)].depth|hotspot[get(hotspot_link)].alpha|hotspot[get(hotspot_link)].oy|hotspot[get(hotspot_link)].rx, 4000|0.0|-50|-60, 0.5, default,
 						skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
-						
+						if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
+						skin_updatescroll();
+					);
 				);
 	</action>
 

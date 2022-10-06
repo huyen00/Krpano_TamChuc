@@ -148,10 +148,6 @@
 	</action>
 
     <action name="open_info">
-<!--
-        showlog();
-        trace(layer[tab_info].visible);
--->
         if(get(layer[tab_info].visible) == false,set(layer[tab_info].visible,true),set(layer[tab_info].visible,false));
 
 	</action>
