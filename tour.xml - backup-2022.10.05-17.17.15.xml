@@ -132,14 +132,14 @@
 		<image prealign="0|0.0|0">
 			<cube url="panos/tongthe_tamquan_chuangoc_1.tiles/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="Iconcallout_bottom"  ath="-170.389" atv="12.071" linkedscene="scene_4_congtamquan" />
-		<hotspot name="spot2" style="Iconcallout_bottom" ath="105.143" atv="25.073" linkedscene="scene_5_vuoncotkinh" />
-		<hotspot name="spot3" style="Iconcallout_square" ath="143.245" atv="26.156" linkedscene="scene_6_dienquanam" />
-		<hotspot name="spot4" style="Iconcallout_pano_left" ath="177.055" atv="31.749" linkedscene="scene_7_dienphapchu" />
+		<hotspot name="spot1" style="Iconcallout_bottom"  ath="148.667" atv="43.926" linkedscene="scene_4_congtamquan" />
+		<hotspot name="spot2" style="Iconcallout_bottom" ath="147.429" atv="32.025" linkedscene="scene_5_vuoncotkinh" />
+		<hotspot name="spot3" style="Iconcallout_square" ath="146.363" atv="16.451" linkedscene="scene_6_dienquanam" />
+		<hotspot name="spot4" style="Iconcallout_pano_left" ath="145.664" atv="9.660" linkedscene="scene_7_dienphapchu" />
 	
-		<hotspot name="spot5" style="Iconcallout_bottom" ath="96.867" atv="2.569" distorted="false" zoom="false" linkedscene="scene_tongthe_tamquan_chuangoc_4_lenden" />
+		<hotspot name="spot5" style="Iconcallout_bottom" ath="145.464" atv="4.573" distorted="false" zoom="false" linkedscene="scene_tongthe_tamquan_chuangoc_4_lenden" />
 		
-		<hotspot name="spot6" style="skin_hotspotstyle_pointaddress"  ath="110.491" atv="-4.928" distorted="false" zoom="false" linkedscene="scene_9_chuangoc3" />
+		<hotspot name="spot6" style="skin_hotspotstyle_pointaddress"  ath="143.689" atv="-2.909" distorted="false" zoom="false" linkedscene="scene_9_chuangoc3" />
 		<hotspot name="spot7" style="skin_hotspotstyle_pointaddress" ath="-17.446" atv="10.606" distorted="false" zoom="false" linkedscene="scene_3_dinhtamchuc1" />
 		<hotspot name="spot9" style="skin_hotspotstyle_pointaddress" ath="-159.997" atv="-1.279"  distorted="false" zoom="false"  linkedscene="scene_10_chuacobasao1" />
 		<hotspot name="spot10" style="skin_hotspotstyle_pointaddress"  ath="-35.605" atv="6.991" distorted="false" zoom="false"  linkedscene="scene_1_thuydinh2" />
@@ -147,11 +147,8 @@
 
 		<hotspot name="spot12" style="Iconcallout_top"  ath="-2.594" atv="3.347" distorted="false" zoom="false"  content="Chùa Bà Đanh" linkedscene="scene_9_chuangoc3"/>
 		<hotspot name="spot13" style="Iconcallout_top"   ath="-146.360" atv="-3.489" distorted="false" zoom="false"  content="Chùa  Hương" linkedscene="scene_9_chuangoc3"/>
-		<hotspot name="spot14" style="Iconcallout_top"    ath="-163.386" atv="-4.232" distorted="false" zoom="false"  content="Chùa  Tiên" linkedscene="scene_9_chuangoc3"/>
+		<hotspot name="spot14" style="Iconcallout_top"    ath="166.183" atv="-7.332" distorted="false" zoom="false"  content="Chùa  Tiên" linkedscene="scene_9_chuangoc3"/>
 		<hotspot name="spot15" style="Iconcallout_top"    ath="28.639" atv="-0.303" distorted="false" zoom="false"  content="Thành Phố Phủ" linkedscene="scene_9_chuangoc3"/>
-		<hotspot name="spot8" style="skin_hotspotstyle" ath="144.338" atv="-3.456" distorted="false" zoom="false" linkedscene="scene_6_dienquanam" />
-		<hotspot name="spot11" style="skin_hotspotstyle" ath="145.744" atv="13.772" distorted="false" zoom="false" linkedscene="scene_5_vuoncotkinh1" />
-		
 
 
 		

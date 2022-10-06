@@ -45,7 +45,7 @@
 			sub(dx, mouse.stagex, drag_adjustx);
 			sub(dy, mouse.stagey, drag_adjusty);
 			screentosphere(dx, dy, hotspot[get(hotspot_link)].ath, hotspot[get(hotspot_link)].atv);
-			print_hotspot_pos();
+			print_hotspot_pos_callout();
 		  );
 
 	);
@@ -56,6 +56,16 @@
 	<action name="print_hotspot_pos"><![CDATA[
 		copy(print_ath, ath);
 		copy(print_atv, atv);
+		roundval(print_ath, 3);
+		roundval(print_atv, 3);
+		calc(plugin[hotspot_pos_info].html, '&lt;hotspot name="' + name + '" ath="' + print_ath + '" atv="' + print_atv + '"');
+		showlog();
+		trace(plugin[hotspot_pos_info].html)
+	]]></action>
+
+	<action name="print_hotspot_pos_callout"><![CDATA[
+		copy(print_ath, hotspot[get(hotspot_link)].ath);
+		copy(print_atv, hotspot[get(hotspot_link)].atv);
 		roundval(print_ath, 3);
 		roundval(print_atv, 3);
 		calc(plugin[hotspot_pos_info].html, '&lt;hotspot name="' + name + '" ath="' + print_ath + '" atv="' + print_atv + '"');
