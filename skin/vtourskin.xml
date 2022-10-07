@@ -322,13 +322,18 @@
 	</action>
 
 	<action name="skin_hotspotstyle_click" scope="local">
+	showlog();
+	trace(get(view.hlookat));
 		if(caller.linkedscene,
 			copy(hs_linkedscene, caller.linkedscene);
 			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 			set(caller.enabled, false);
 			skin_hidetooltips();
+			set(atH,get(view.hlookat));
+            set(atV,get(view.vlookat));
 			tween(caller.depth|caller.alpha|caller.oy|caller.rx, 4000|0.0|-50|-60, 0.5, default,
 				skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+				lookat(get(atH),get(atV));
 				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
 				skin_updatescroll();
 			);
